@@ -2,21 +2,21 @@ package ru.shum;
 
 public class FindDifference {
   /**
-   * Написать функцию, возвращающую разницу между самым большим и самым ма- леньким элементами
+   * Написать функцию, возвращающую разницу между самым большим и самым маленьким элементами
    * переданного не пустого массива.
    *
-   * @param nums Принимает массив
+   * @param arrayOfNums Принимает массив
    * @return Возвращаем разницу между максимальным и минимальным элементами
    */
-  public static int findDifference(int[] nums) {
-    if (nums.length <= 1) {
-      return 0; // или другое значение по умолчанию
+  public static int findDifference(int[] arrayOfNums) {
+    if (arrayOfNums.length <= 1) {
+      return 0;
     }
 
-    int max = nums[0];
-    int min = nums[0];
+    int max = arrayOfNums[0];
+    int min = arrayOfNums[0];
 
-    for (int num : nums) {
+    for (int num : arrayOfNums) {
       if (num > max) {
         max = num;
       }

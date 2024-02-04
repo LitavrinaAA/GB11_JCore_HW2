@@ -1,45 +1,51 @@
 package ru.shum;
 
+
 import java.util.Arrays;
 
 public class Main {
 
-  public static void main(String[] args) {
-    int[] nums1 = {2, 1, 2, 3, 4, 8, 9, 3, 0};
-    int[] nums2 = {2, 2, 0, 0, 2, 3, 8, 0, 0, 0};
-    int[] nums3 = {1, 3, 5, 3, 33, 0, 333, 0};
+    public static void main(String[] args) {
+        int[] arr1 = {2, 1, 2, 3, 4, 8, 9, 3, 0};
+        int[] arr2 = {2, 2, 0, 0, 2, 3, 8, 0, 0, 0};
+        int[] arr3 = {1, 3, 5, 3, 33, 0, 333, 0};
 
-    printResult(nums1, "Количество чётных элементов", СountEvens.countEvens(nums1));
-    printResult(nums2, "Количество чётных элементов", СountEvens.countEvens(nums2));
-    printResult(nums3, "Количество чётных элементов", СountEvens.countEvens(nums3));
-
-    System.out.println();
-
-    printResult(nums1, "Разница между мин. и макс.", FindDifference.findDifference(nums1));
-    printResult(nums2, "Разница между мин. и макс.", FindDifference.findDifference(nums2));
-    printResult(nums3, "Разница между мин. и макс.", FindDifference.findDifference(nums3));
+        printResult(arr1, "Количество чётных элементов", CountEvens.countEvens(arr1));
+        printResult(arr2, "Количество чётных элементов", CountEvens.countEvens(arr2));
+        printResult(arr3, "Количество чётных элементов", CountEvens.countEvens(arr3));
 
     System.out.println();
 
-    printResult(nums1, "Имеются ли два соседних элемента, с нулевым значением",
-        HasZeroNeighbors.hasZeroNeighbors(nums1));
-    printResult(nums2, "Имеются ли два соседних элемента, с нулевым значением",
-        HasZeroNeighbors.hasZeroNeighbors(nums2));
-    printResult(nums3, "Имеются ли два соседних элемента, с нулевым значением",
-        HasZeroNeighbors.hasZeroNeighbors(nums3));
+    printResult(arr1, "Разница между мин. и макс.", FindDifference.findDifference(arr1));
+    printResult(arr2, "Разница между мин. и макс.", FindDifference.findDifference(arr2));
+    printResult(arr3, "Разница между мин. и макс.", FindDifference.findDifference(arr3));
 
-  }
+    System.out.println();
 
-  /**
-   * Метод для печати результатов
-   *
-   * @param nums   Массив
-   * @param label  Наименование метода
-   * @param result Результат метода
-   */
-  public static void printResult(int[] nums, String label, Object result) {
-    System.out.print(Arrays.toString(nums) + " ");
-    System.out.println(label + ": " + result);
-  }
+    printResult(arr1, "Имеются ли два соседних элемента, с нулевым значением",
+        HasZeroNeighbors.hasZeroNeighbors(arr1));
+    printResult(arr2, "Имеются ли два соседних элемента, с нулевым значением",
+        HasZeroNeighbors.hasZeroNeighbors(arr2));
+    printResult(arr3, "Имеются ли два соседних элемента, с нулевым значением",
+        HasZeroNeighbors.hasZeroNeighbors(arr3));
+
+    }
+
+    /**
+     * Метод для печати результатов
+     *
+     * @param arrayOfNums Массив
+     * @param message     Содержит сообщение какая операция была выполнена
+     * @param result      Содержит результат выполненной операции
+     */
+    public static void printResult(int[] arrayOfNums, String message, Object result) {
+        String printMessage = Arrays.toString(arrayOfNums) +
+                " " +
+                message +
+                ":" +
+                result;
+        System.out.println(printMessage);
+
+    }
 
 }
